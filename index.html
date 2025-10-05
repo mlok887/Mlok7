@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> مرحبا بكم في تطبيق سياحه الريم</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --card-radius:18px;
+      --pad:18px;
+      --yellow:#FDEBD0;
+      --blue:#A9D1F8;
+      --mint:#CFEFE6;
+      --coral:#F1A19A;
+      --bg:#fff;
+      --text:#111;
+      --muted:#666;
+      --header-height:210px;
+      font-family: "Tajawal", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      padding:20px;
+      background:#fafafa;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      direction:ltr;
+    }
+
+    .hero{
+      height:var(--header-height);
+      border-radius:18px;
+      overflow:hidden;
+      position:relative;
+      background:linear-gradient(135deg, #5ac18e, #2e8f5f);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      margin-bottom:18px;
+    }
+    .hero .title{
+      font-size:30px;
+      font-weight:700;
+      text-shadow:0 4px 10px rgba(0,0,0,0.25);
+      text-align:center;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+      margin-bottom:22px;
+    }
+    .card{
+      padding:18px;
+      border-radius:14px;
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      justify-content:center;
+      min-height:92px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.04);
+    }
+    .card .icon{
+      width:42px;
+      height:42px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:8px;
+    }
+    .card .label{
+      font-size:18px;
+      font-weight:600;
+      color:var(--text);
+    }
+
+    .card.map{ background:var(--yellow); align-items:center; justify-content:center; }
+    .card.places{ background:var(--blue); }
+    .card.events{ background:var(--mint); }
+    .card.tours{ background:var(--coral); }
+
+    .btn-map{
+      cursor:pointer;
+      border:0;
+      background:transparent;
+      padding:0;
+      text-align:left;
+      width:100%;
+    }
+
+    .section-title{
+      font-size:22px;
+      font-weight:700;
+      margin:6px 0 12px 0;
+    }
+    .popular{
+      border-radius:14px;
+      overflow:hidden;
+      min-height:110px;
+      background:#eee;
+      box-shadow:0 4px 10px rgba(0,0,0,0.03);
+    }
+
+    @media (max-width:420px){
+      .hero{height:160px}
+      .hero .title{font-size:24px}
+      body{padding:14px}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="title">مرحبا بكم في تطبيق سياحه الريم</div>
+  </header>
+
+  <main>
+    <div class="grid">
+      <button class="card map btn-map" id="startBtn">
+        <div class="label">ابدا</div>
+      </button>
+
+      <div class="card places">
+        <div class="label">Places</div>
+      </div>
+
+      <div class="card events">
+        <div class="label">Events</div>
+      </div>
+
+      <div class="card tours">
+        <div class="label">Tours</div>
+      </div>
+    </div>
+
+    <div class="section-title">Popular Now</div>
+    <div class="popular"></div>
+  </main>
+
+  <script>
+    document.getElementById('startBtn').addEventListener('click', function(){
+      window.location.href = "start.html";
+    });
+  </script>
+</body>
+</html>
